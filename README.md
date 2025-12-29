@@ -47,7 +47,31 @@ The project is structured to support multiple entry points:
 
 1. **build.gradle**: `android/app/build.gradle` is configured with `productFlavors` to define `dev`, `staging`, and `prod`.
 2. **AndroidManifest.xml**: The manifest uses placeholders (e.g., `${applicationName}`) that are dynamically replaced based on the build flavor.
+3. **Example `build.gradle` configuration**:
 
+```groovy
+android {
+    // ...
+    flavorDimensions "default"
+
+    productFlavors {
+        dev {
+            dimension "default"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "PoC Dev"
+        }
+        staging {
+            dimension "default"
+            applicationIdSuffix ".staging"
+            resValue "string", "app_name", "PoC Staging"
+        }
+        prod {
+            dimension "default"
+            resValue "string", "app_name", "PoC Flavors"
+        }
+    }
+}
+```
 ### iOS Setup
 
 1. **Schemes**: Custom schemes created in Xcode for each environment (Dev, Staging, Prod).
