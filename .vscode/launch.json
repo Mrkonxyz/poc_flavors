@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run DEV",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_dev.dart",
+            "args": ["--flavor", "dev", "--dart-define-from-file", "assets/config/dev.json"]
+        },
+        {
+            "name": "Run UAT",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_uat.dart",
+            "args": ["--flavor", "uat", "--dart-define-from-file", "assets/config/uat.json"]
+        },
+        {
+            "name": "Run PROD",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "args": ["--flavor", "prod", "--dart-define-from-file", "assets/config/prod.json"]
+        }
+    ]
+}

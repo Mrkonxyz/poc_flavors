@@ -1,0 +1,5 @@
+{
+  "appName": "My App (UAT)",
+  "apiBaseUrl": "https://uat-api.example.com",
+  "flavor": "uat"
+}

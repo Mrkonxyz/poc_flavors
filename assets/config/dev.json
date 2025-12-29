@@ -1,0 +1,5 @@
+{
+  "appName": "My App (DEV)",
+  "apiBaseUrl": "https://dev-api.example.com",
+  "flavor": "dev"
+}
